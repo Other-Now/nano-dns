@@ -1,0 +1,90 @@
+{
+  "experiment": "cache",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": {
+    "rows": [
+      {
+        "cache_size": 1000,
+        "hit_ratio": 0.5858046683198548,
+        "upstream_per_query": 0.4345923440741116,
+        "Load": {
+          "sent": 400367,
+          "received": 400367,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 400367
+          },
+          "seconds": 5.000631106,
+          "qps": 80063.29431491562,
+          "p50_us": 285.073,
+          "p90_us": 827.691,
+          "p99_us": 2044.127,
+          "p999_us": 3899.27
+        }
+      },
+      {
+        "cache_size": 10000,
+        "hit_ratio": 0.8043207401254547,
+        "upstream_per_query": 0.19525141064932833,
+        "Load": {
+          "sent": 558047,
+          "received": 558047,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 558047
+          },
+          "seconds": 5.000269362,
+          "qps": 111603.38765765875,
+          "p50_us": 184.058,
+          "p90_us": 612.732,
+          "p99_us": 1771.551,
+          "p999_us": 3348.262
+        }
+      },
+      {
+        "cache_size": 100000,
+        "hit_ratio": 0.9231126298874616,
+        "upstream_per_query": 0.07693925000785025,
+        "Load": {
+          "sent": 732437,
+          "received": 732437,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 732437
+          },
+          "seconds": 5.000297776,
+          "qps": 146478.6764331293,
+          "p50_us": 131.86,
+          "p90_us": 414.033,
+          "p99_us": 1700.629,
+          "p999_us": 3790.014
+        }
+      },
+      {
+        "cache_size": 1000000,
+        "hit_ratio": 0.9242692985774262,
+        "upstream_per_query": 0.0757293647940055,
+        "Load": {
+          "sent": 748121,
+          "received": 748121,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 748121
+          },
+          "seconds": 5.00057156,
+          "qps": 149607.09811340045,
+          "p50_us": 131.905,
+          "p90_us": 399.109,
+          "p99_us": 1624.492,
+          "p999_us": 3678.798
+        }
+      }
+    ],
+    "workload": "Zipf s=1.1 over 100k names, TTL 300 s"
+  },
+  "when": "2026-11-13T07:19:14Z"
+}

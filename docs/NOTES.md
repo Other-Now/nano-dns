@@ -174,6 +174,12 @@ block the victim's real users as well, which completes the attacker's job.
 - Four readers on *one* socket helped only a little (79k), and 355
   timeouts remained at 256 clients. I didn't check the kernel counter for
   that variant.
+- **The twist (CI run):** on the GitHub runner, 1 socket had **0** drops,
+  because the default receive buffer there is 1 MB against 208 KB in WSL2.
+  So the root cause is buffer size versus burst. A server shouldn't rely on
+  the distro default: it should set SO_RCVBUF, which I haven't added yet.
+  `SO_REUSEPORT` still scaled on the runner, from ~118k to ~196k qps,
+  because the single reader goroutine is the CPU bottleneck.
 
 **3. The resolver amplified the attack** (`torture.json`)
 - The attacker sent 10k q/s, but the victim's authoritative server received

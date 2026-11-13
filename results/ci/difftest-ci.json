@@ -1,0 +1,29 @@
+{
+  "bailiwick_dropped": 0,
+  "classes": {
+    "disjoint_cdn": 23,
+    "disjoint_ours_vs_ref": 1,
+    "identical": 247,
+    "rotation": 29
+  },
+  "cold_ms_p50": 66.231,
+  "cold_ms_p90": 300.99,
+  "domains": 300,
+  "qmin": false,
+  "ref": "1.1.1.1:53",
+  "skip": 0,
+  "to_investigate": [
+    {
+      "domain": "www.gov.uk",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 151.101.160.144",
+      "ref": "NOERROR 151.101.0.144,151.101.128.144,151.101.192.144,151.101.64.144",
+      "ours_ms": 349.08
+    }
+  ],
+  "upstream_queries": 801,
+  "upstream_tcp": 0,
+  "upstream_timeouts": 7,
+  "when": "2026-11-13T07:20:28Z",
+  "www": false
+}

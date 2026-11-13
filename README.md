@@ -26,8 +26,8 @@ client ──UDP/TCP──▶ server ─┬─ parse + validate (FORMERR / REFUS
 ## Results
 
 Laptop numbers: WSL2, 4 vCPU, 2 GB RAM, with the load generator on the same
-4 vCPUs. Every number is in `results/`. CI repeats the experiments on a
-GitHub runner.
+4 vCPUs. Every number is in `results/`. CI repeats everything on a GitHub runner
+(4 vCPU); that run is in `results/ci/` and summarised below the table.
 
 | what | result | file |
 |---|---|---|
@@ -47,6 +47,18 @@ GitHub runner.
 | fuzzing the parser (Unpack → Pack → Unpack must be identical) | **37.5M inputs in 10 min, 0 failures** (CI: 60 s per push) | `fuzz.txt` |
 | microbenchmarks | policy match 86 ns (clean 4-label name) / 34 ns (blocked), 0 allocs; codec unpack+pack **5.7 µs, 67 allocs**: the obvious next optimisation | `microbench.txt` |
 | tests | 29 tests (codec, cache, resolver vs simulator, spoofed reply, bailiwick poisoning, policy, RRL, torture, coalescing), `-race` clean | — |
+
+**Second machine (GitHub runner, CI run 43384475863, `results/ci/`):**
+- **Cache hits:** 1 socket ~115–122k qps, 4 `SO_REUSEPORT` sockets ~196k (1.6×).
+- **No receive-buffer drops even on 1 socket.** The runner's default
+  `rmem_default` is 1 MB against 208 KB in WSL2, so the laptop drops were a
+  small-buffer effect. The server should set `SO_RCVBUF` itself.
+- **1M-rule policy:** −4.8% throughput.
+- **Water torture:** unmitigated, legitimate victim.com answers fell
+  299,043 → 10,466 while the victim's server took 26.2k q/s. Mitigated:
+  284,448 answers.
+- **Difftest, top 300 from a datacentre:** 299 agree (the 1 other is a
+  Fastly edge for www.gov.uk); 0.9% upstream timeouts; cold p50 66 ms.
 
 ## Run it
 

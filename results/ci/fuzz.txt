@@ -1,0 +1,4 @@
+fuzz: elapsed: 10m0s, execs: 37547207 (70388/sec), new interesting: 18 (total: 99)
+fuzz: elapsed: 10m0s, execs: 37547207 (0/sec), new interesting: 18 (total: 99)
+PASS
+ok  	github.com/Other-Now/nano-dns/dnswire	600.159s

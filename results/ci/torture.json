@@ -1,0 +1,179 @@
+{
+  "experiment": "torture",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": {
+    "phases": [
+      {
+        "phase": "baseline (no attack)",
+        "legit_victim": {
+          "sent": 299043,
+          "received": 299043,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 299043
+          },
+          "seconds": 5.000067252,
+          "qps": 59807.79556122658,
+          "p50_us": 49.843,
+          "p90_us": 102.763,
+          "p99_us": 296.44,
+          "p999_us": 1257.224
+        },
+        "legit_popular": {
+          "sent": 321176,
+          "received": 321176,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 321176
+          },
+          "seconds": 5.000088022,
+          "qps": 64234.069197752215,
+          "p50_us": 50.142,
+          "p90_us": 101.798,
+          "p99_us": 229.512,
+          "p999_us": 651.202
+        },
+        "victim_server_qps": 240,
+        "victim_server_dropped_frac": 0,
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 618960,
+          "nanodns_queries_total{outcome=\"coalesced\"}": 59,
+          "nanodns_queries_total{outcome=\"resolved\"}": 1259,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 618960,
+          "nanodns_query_duration_seconds_count{path=\"miss\"}": 1259,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 5.570174169999953,
+          "nanodns_query_duration_seconds_sum{path=\"miss\"}": 1.4511025249999676,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 620219,
+          "nanodns_upstream_queries_total": 1200
+        }
+      },
+      {
+        "phase": "attack, no mitigation",
+        "legit_victim": {
+          "sent": 10474,
+          "received": 10466,
+          "timeouts": 8,
+          "rcodes": {
+            "NOERROR": 10466
+          },
+          "seconds": 5.028880222,
+          "qps": 2081.1790175900514,
+          "p50_us": 56.418,
+          "p90_us": 147.474,
+          "p99_us": 520.031,
+          "p999_us": 2769.038
+        },
+        "legit_popular": {
+          "sent": 295521,
+          "received": 295521,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 295521
+          },
+          "seconds": 5.000045667,
+          "qps": 59103.66018263008,
+          "p50_us": 43.779,
+          "p90_us": 115.184,
+          "p99_us": 384.597,
+          "p999_us": 1399.818
+        },
+        "attack": {
+          "sent": 49991,
+          "received": 47820,
+          "timeouts": 0,
+          "rcodes": {
+            "NXDOMAIN": 13170,
+            "SERVFAIL": 34650
+          },
+          "seconds": 5.00056332,
+          "qps": 9562.922602887867
+        },
+        "victim_server_qps": 26200.6,
+        "victim_server_dropped_frac": 0.899238948726365,
+        "metrics": {
+          "nanodns_cache_entries": 13163,
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 305956,
+          "nanodns_queries_total{outcome=\"coalesced\"}": 2,
+          "nanodns_queries_total{outcome=\"resolved\"}": 13201,
+          "nanodns_queries_total{outcome=\"servfail\"}": 34665,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 305956,
+          "nanodns_query_duration_seconds_count{path=\"miss\"}": 47866,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 2.894412549000009,
+          "nanodns_query_duration_seconds_sum{path=\"miss\"}": 89130.22238446047,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 305987,
+          "nanodns_responses_total{rcode=\"NXDOMAIN\"}": 13170,
+          "nanodns_responses_total{rcode=\"SERVFAIL\"}": 34665,
+          "nanodns_upstream_queries_total": 131003,
+          "nanodns_upstream_timeouts_total": 115639
+        }
+      },
+      {
+        "phase": "attack, mitigation on",
+        "legit_victim": {
+          "sent": 284448,
+          "received": 284448,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 284448
+          },
+          "seconds": 5.000103026,
+          "qps": 56888.42780256744,
+          "p50_us": 50.646,
+          "p90_us": 112.864,
+          "p99_us": 328.956,
+          "p999_us": 1278.759
+        },
+        "legit_popular": {
+          "sent": 310809,
+          "received": 310809,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 310809
+          },
+          "seconds": 5.000140987,
+          "qps": 62160.04724828372,
+          "p50_us": 48.926,
+          "p90_us": 111.379,
+          "p99_us": 264.317,
+          "p999_us": 662.17
+        },
+        "attack": {
+          "sent": 49991,
+          "received": 49991,
+          "timeouts": 0,
+          "rcodes": {
+            "NXDOMAIN": 211,
+            "SERVFAIL": 49780
+          },
+          "seconds": 5.00002568,
+          "qps": 9998.148649508536
+        },
+        "victim_server_qps": 284.4,
+        "victim_server_dropped_frac": 0.007735583684950774,
+        "metrics": {
+          "nanodns_cache_entries": 211,
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 593998,
+          "nanodns_queries_total{outcome=\"coalesced\"}": 58,
+          "nanodns_queries_total{outcome=\"resolved\"}": 1470,
+          "nanodns_queries_total{outcome=\"torture_mitigated\"}": 49780,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 593998,
+          "nanodns_query_duration_seconds_count{path=\"miss\"}": 51250,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 5.33359212599982,
+          "nanodns_query_duration_seconds_sum{path=\"miss\"}": 12.40192485900004,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 595257,
+          "nanodns_responses_total{rcode=\"NXDOMAIN\"}": 211,
+          "nanodns_responses_total{rcode=\"SERVFAIL\"}": 49780,
+          "nanodns_torture_mitigated_domains": 1,
+          "nanodns_upstream_queries_total": 1422,
+          "nanodns_upstream_timeouts_total": 11
+        }
+      }
+    ],
+    "setup": "victim.com authoritative capacity 2000 q/s, 1 ms RTT, host TTL 2 s; attacker 10000 q/s random subdomains; legit 4+4 closed-loop clients"
+  },
+  "when": "2026-11-13T07:19:56Z"
+}

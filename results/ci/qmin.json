@@ -1,0 +1,31 @@
+{
+  "experiment": "qmin",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": [
+    {
+      "qmin": false,
+      "names": 402,
+      "failures": 0,
+      "upstream_queries": 411,
+      "root_queries": 2,
+      "root_saw_more_than_tld": 2,
+      "tld_queries": 5,
+      "tld_saw_more_than_domain": 5
+    },
+    {
+      "qmin": true,
+      "names": 402,
+      "failures": 0,
+      "upstream_queries": 414,
+      "root_queries": 2,
+      "root_saw_more_than_tld": 0,
+      "tld_queries": 5,
+      "tld_saw_more_than_domain": 0
+    }
+  ],
+  "when": "2026-11-13T07:17:54Z"
+}

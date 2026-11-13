@@ -1,0 +1,340 @@
+{
+  "experiment": "throughput",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": {
+    "note": "load generator runs on the same 4 vCPUs",
+    "phases": [
+      {
+        "name": "hit/1sock-1reader c=32",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 609139,
+          "received": 609139,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 609139
+          },
+          "seconds": 5.000366218,
+          "qps": 121818.87754686052,
+          "p50_us": 230.294,
+          "p90_us": 370.998,
+          "p99_us": 622.379,
+          "p999_us": 2695.283
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 609139,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 609139,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 4.060613927999942,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 609139
+        }
+      },
+      {
+        "name": "hit/1sock-1reader c=128",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 576467,
+          "received": 576467,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 576467
+          },
+          "seconds": 5.000566072,
+          "qps": 115280.34860450095,
+          "p50_us": 983.44,
+          "p90_us": 1572.326,
+          "p99_us": 3012.655,
+          "p999_us": 6810.006
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 576467,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 576467,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 4.053309356999915,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 576467
+        }
+      },
+      {
+        "name": "hit/1sock-1reader c=256",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 546556,
+          "received": 546556,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 546556
+          },
+          "seconds": 5.002510719,
+          "qps": 109256.3376074597,
+          "p50_us": 2238.541,
+          "p90_us": 3088.33,
+          "p99_us": 5247.406,
+          "p999_us": 13561.847
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 546556,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 546556,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 4.175594796999947,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 546556
+        }
+      },
+      {
+        "name": "hit/1sock-4readers c=32",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "4"
+        ],
+        "load": {
+          "sent": 594489,
+          "received": 594489,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 594489
+          },
+          "seconds": 5.000685904,
+          "qps": 118881.49174185765,
+          "p50_us": 235.571,
+          "p90_us": 386.833,
+          "p99_us": 787.535,
+          "p999_us": 2741.598
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 594489,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 594489,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 17.88366996499945,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 594489
+        }
+      },
+      {
+        "name": "hit/1sock-4readers c=128",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "4"
+        ],
+        "load": {
+          "sent": 605119,
+          "received": 605119,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 605119
+          },
+          "seconds": 5.001243725,
+          "qps": 120993.70342124248,
+          "p50_us": 1007.055,
+          "p90_us": 1290.056,
+          "p99_us": 2405.556,
+          "p999_us": 5937.535
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 605119,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 605119,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 18.390656334999967,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 605119
+        }
+      },
+      {
+        "name": "hit/1sock-4readers c=256",
+        "args": [
+          "-sockets",
+          "1",
+          "-readers",
+          "4"
+        ],
+        "load": {
+          "sent": 589198,
+          "received": 589198,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 589198
+          },
+          "seconds": 5.002633205,
+          "qps": 117777.5735009139,
+          "p50_us": 2080.616,
+          "p90_us": 2529.854,
+          "p99_us": 4674.348,
+          "p999_us": 14395.149
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 589198,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 589198,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 18.201179898001662,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 589198
+        }
+      },
+      {
+        "name": "hit/4sock-reuseport c=32",
+        "args": [
+          "-sockets",
+          "4",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 869118,
+          "received": 869118,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 869118
+          },
+          "seconds": 5.000240686,
+          "qps": 173815.233021365,
+          "p50_us": 119.044,
+          "p90_us": 320.307,
+          "p99_us": 1343.71,
+          "p999_us": 3396.568
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 869118,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 869118,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 7.421930289000147,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 869118
+        }
+      },
+      {
+        "name": "hit/4sock-reuseport c=128",
+        "args": [
+          "-sockets",
+          "4",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 962843,
+          "received": 962843,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 962843
+          },
+          "seconds": 5.000686493,
+          "qps": 192542.16423041018,
+          "p50_us": 436.741,
+          "p90_us": 1375.781,
+          "p99_us": 3867.377,
+          "p999_us": 7319.797
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 962843,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 962843,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 9.095368063000336,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 962843
+        }
+      },
+      {
+        "name": "hit/4sock-reuseport c=256",
+        "args": [
+          "-sockets",
+          "4",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 981524,
+          "received": 981524,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 981524
+          },
+          "seconds": 5.001944417,
+          "qps": 196228.48999763286,
+          "p50_us": 935.528,
+          "p90_us": 2699.48,
+          "p99_us": 6303.736,
+          "p999_us": 13842.084
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 981524,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 981524,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 9.888718296998281,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 981524
+        }
+      },
+      {
+        "name": "hit/4sock-reuseport+policy-1000k-rules c=128",
+        "args": [
+          "-sockets",
+          "4",
+          "-readers",
+          "1",
+          "-policy",
+          "/tmp/nanodns-policy3556899578/policy.json"
+        ],
+        "load": {
+          "sent": 916641,
+          "received": 916641,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 916641
+          },
+          "seconds": 5.001559142,
+          "qps": 183271.05088143735,
+          "p50_us": 438.906,
+          "p90_us": 1441.673,
+          "p99_us": 4251.882,
+          "p999_us": 9756.084
+        },
+        "metrics": {
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 916641,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 916641,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 8.339897711999958,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 916641
+        }
+      },
+      {
+        "name": "miss/4sock-reuseport c=128",
+        "args": [
+          "-sockets",
+          "4",
+          "-readers",
+          "1"
+        ],
+        "load": {
+          "sent": 387513,
+          "received": 387513,
+          "timeouts": 0,
+          "rcodes": {
+            "NOERROR": 387513
+          },
+          "seconds": 5.003436013,
+          "qps": 77449.37658704101,
+          "p50_us": 1267.397,
+          "p90_us": 3416.382,
+          "p99_us": 7656.383,
+          "p999_us": 13722.994
+        },
+        "metrics": {
+          "nanodns_cache_entries": 199999,
+          "nanodns_queries_total{outcome=\"cache_hit\"}": 187514,
+          "nanodns_queries_total{outcome=\"resolved\"}": 199999,
+          "nanodns_query_duration_seconds_count{path=\"fast\"}": 187514,
+          "nanodns_query_duration_seconds_count{path=\"miss\"}": 199999,
+          "nanodns_query_duration_seconds_sum{path=\"fast\"}": 1.7540733279999914,
+          "nanodns_query_duration_seconds_sum{path=\"miss\"}": 345.038655191999,
+          "nanodns_responses_total{rcode=\"NOERROR\"}": 387513,
+          "nanodns_upstream_queries_total": 199999
+        }
+      }
+    ]
+  },
+  "when": "2026-11-13T07:18:54Z"
+}

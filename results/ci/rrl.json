@@ -1,0 +1,57 @@
+{
+  "experiment": "rrl",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": [
+    {
+      "name": "rrl off",
+      "load": {
+        "sent": 99981,
+        "received": 99981,
+        "timeouts": 0,
+        "rcodes": {
+          "NOERROR": 99981
+        },
+        "seconds": 5.000865288,
+        "qps": 19992.74010438011
+      },
+      "metrics": {
+        "nanodns_queries_total{outcome=\"cache_hit\"}": 99981,
+        "nanodns_query_duration_seconds_count{path=\"fast\"}": 99981,
+        "nanodns_query_duration_seconds_sum{path=\"fast\"}": 0.7410178610000108,
+        "nanodns_responses_total{rcode=\"NOERROR\"}": 99981
+      }
+    },
+    {
+      "name": "rrl 100/s per /24, slip 2",
+      "args": [
+        "-rrl-rate",
+        "100",
+        "-rrl-slip",
+        "2"
+      ],
+      "load": {
+        "sent": 99981,
+        "received": 50290,
+        "timeouts": 0,
+        "rcodes": {
+          "NOERROR": 50290
+        },
+        "seconds": 5.00033673,
+        "qps": 10057.322679546824
+      },
+      "metrics": {
+        "nanodns_queries_total{outcome=\"cache_hit\"}": 99981,
+        "nanodns_queries_total{outcome=\"rrl_drop\"}": 49691,
+        "nanodns_queries_total{outcome=\"rrl_slip\"}": 49691,
+        "nanodns_query_duration_seconds_count{path=\"fast\"}": 99981,
+        "nanodns_query_duration_seconds_sum{path=\"fast\"}": 0.5434052389999966,
+        "nanodns_responses_total{rcode=\"NOERROR\"}": 50290
+      }
+    }
+  ],
+  "when": "2026-11-13T07:19:29Z"
+}
