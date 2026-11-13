@@ -1,0 +1,5 @@
+feeds/*
+!feeds/README.md
+!feeds/policy.example.json
+/nanodns
+*.test

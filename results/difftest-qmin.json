@@ -1,0 +1,122 @@
+{
+  "bailiwick_dropped": 0,
+  "classes": {
+    "both_servfail": 1,
+    "disjoint_cdn": 49,
+    "disjoint_ours_vs_ref": 6,
+    "identical": 876,
+    "ours_failed": 4,
+    "overlap": 1,
+    "rcode_diff": 2,
+    "ref_failed": 1,
+    "rotation": 60
+  },
+  "cold_ms_p50": 397.544,
+  "cold_ms_p90": 1252.199,
+  "domains": 1000,
+  "qmin": true,
+  "ref": "1.1.1.1:53",
+  "skip": 0,
+  "to_investigate": [
+    {
+      "domain": "wikimedia.org",
+      "class": "ref_failed",
+      "ours": "NOERROR 103.102.166.224",
+      "ref": "read udp 172.28.75.153:45333-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 326.068
+    },
+    {
+      "domain": "cdngslb.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 115.238.23.241",
+      "ours_err": "read udp 172.28.75.153:34773-\u003e192.43.172.30:53: i/o timeout",
+      "ours_ms": 2403.936
+    },
+    {
+      "domain": "amplitude.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 13.248.219.127,76.223.69.48",
+      "ours_err": "read udp 172.28.75.153:35247-\u003e192.5.6.30:53: i/o timeout",
+      "ours_ms": 2407.834
+    },
+    {
+      "domain": "charter.net",
+      "class": "rcode_diff",
+      "ours": "NOERROR 75.2.77.94,99.83.251.242",
+      "ref": "SERVFAIL ",
+      "ours_ms": 1153.024
+    },
+    {
+      "domain": "www.gov.uk",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 199.232.100.144",
+      "ref": "NOERROR 151.101.0.144,151.101.128.144,151.101.192.144,151.101.64.144",
+      "ours_ms": 2077.887
+    },
+    {
+      "domain": "springer.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 151.101.104.95",
+      "ref": "NOERROR 151.101.208.95",
+      "ours_ms": 1151.965
+    },
+    {
+      "domain": "washingtonpost.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 54.192.151.23,54.192.151.30,54.192.151.47,54.192.151.5",
+      "ref": "NOERROR 23.45.91.139,23.45.91.211",
+      "ours_ms": 309.022
+    },
+    {
+      "domain": "ddnss.de",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 85.114.136.161",
+      "ours_err": "read udp 172.28.75.153:56849-\u003e78.31.65.41:53: i/o timeout",
+      "ours_ms": 2620.283
+    },
+    {
+      "domain": "adsrvr.org",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 52.84.118.120,52.84.118.18,52.84.118.33,52.84.118.41",
+      "ref": "NOERROR 65.9.168.103,65.9.168.47,65.9.168.54,65.9.168.92",
+      "ours_ms": 1142.948
+    },
+    {
+      "domain": "uber.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 69.48.216.4",
+      "ref": "NOERROR 69.48.216.73",
+      "ours_ms": 255.383
+    },
+    {
+      "domain": "netexpert.ru",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 185.37.129.10",
+      "ours_err": "read udp 172.28.75.153:51234-\u003e93.100.1.66:53: i/o timeout",
+      "ours_ms": 2729.844
+    },
+    {
+      "domain": "shopee.co.id",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 147.136.172.128",
+      "ref": "NOERROR 134.65.77.140",
+      "ours_ms": 1142.783
+    },
+    {
+      "domain": "spectrum.com",
+      "class": "rcode_diff",
+      "ours": "NOERROR 142.136.168.58,142.136.168.7,142.136.81.135,142.136.81.136",
+      "ref": "SERVFAIL ",
+      "ours_ms": 586.912
+    }
+  ],
+  "upstream_queries": 2912,
+  "upstream_tcp": 1,
+  "upstream_timeouts": 156,
+  "when": "2026-11-13T06:53:39Z",
+  "www": false
+}

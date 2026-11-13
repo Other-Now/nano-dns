@@ -1,0 +1,137 @@
+{
+  "bailiwick_dropped": 0,
+  "classes": {
+    "disjoint_cdn": 52,
+    "disjoint_ours_vs_ref": 7,
+    "identical": 866,
+    "ours_failed": 5,
+    "overlap": 2,
+    "rcode_diff": 1,
+    "ref_failed": 2,
+    "rotation": 65
+  },
+  "cold_ms_p50": 356.655,
+  "cold_ms_p90": 1169.204,
+  "domains": 1000,
+  "qmin": false,
+  "ref": "1.1.1.1:53",
+  "skip": 0,
+  "to_investigate": [
+    {
+      "domain": "mts.ru",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 178.248.238.27",
+      "ours_err": "read udp 172.28.75.153:55466-\u003e213.87.50.254:53: i/o timeout",
+      "ours_ms": 2666.318
+    },
+    {
+      "domain": "app-measurement.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 192.178.158.100,192.178.158.101,192.178.158.102,192.178.158.113,192.178.158.138,192.178.158.139",
+      "ours_err": "read udp 172.28.75.153:47847-\u003e216.239.38.10:53: i/o timeout",
+      "ours_ms": 2517.764
+    },
+    {
+      "domain": "googletagservices.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:45981-\u003e216.239.32.10:53: i/o timeout",
+      "ours_ms": 3410.611
+    },
+    {
+      "domain": "charter.net",
+      "class": "rcode_diff",
+      "ours": "NOERROR 75.2.77.94,99.83.251.242",
+      "ref": "SERVFAIL ",
+      "ours_ms": 1904.454
+    },
+    {
+      "domain": "nature.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 151.101.104.95",
+      "ref": "NOERROR 151.101.208.95",
+      "ours_ms": 689.236
+    },
+    {
+      "domain": "www.gov.uk",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 199.232.100.144",
+      "ref": "NOERROR 151.101.0.144,151.101.128.144,151.101.192.144,151.101.64.144",
+      "ours_ms": 2405.875
+    },
+    {
+      "domain": "checkpoint.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 13.33.153.102,13.33.153.128,13.33.153.20,13.33.153.38",
+      "ref": "NOERROR 13.35.36.20,13.35.36.27,13.35.36.50,13.35.36.79",
+      "ours_ms": 381.901
+    },
+    {
+      "domain": "washingtonpost.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 23.63.110.104,23.63.110.57",
+      "ref": "NOERROR 23.45.91.139,23.45.91.211",
+      "ours_ms": 285.287
+    },
+    {
+      "domain": "ddnss.de",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 85.114.136.161",
+      "ours_err": "read udp 172.28.75.153:57585-\u003e85.114.136.161:53: i/o timeout",
+      "ours_ms": 2614.282
+    },
+    {
+      "domain": "uber.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 104.36.194.8",
+      "ref": "NOERROR 104.36.194.66",
+      "ours_ms": 299.064
+    },
+    {
+      "domain": "netexpert.ru",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 185.37.129.10",
+      "ours_err": "read udp 172.28.75.153:37722-\u003e93.100.1.66:53: i/o timeout",
+      "ours_ms": 2687.903
+    },
+    {
+      "domain": "shopee.co.id",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 147.136.168.96",
+      "ref": "NOERROR 134.65.77.140",
+      "ours_ms": 746.712
+    },
+    {
+      "domain": "singtelchina.cn",
+      "class": "ref_failed",
+      "ours": "SERVFAIL ",
+      "ref": "read udp 172.28.75.153:43284-\u003e1.1.1.1:53: i/o timeout",
+      "ours_err": "resolver: no usable name-server address",
+      "ours_ms": 2594.108
+    },
+    {
+      "domain": "zoom.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 170.114.0.14",
+      "ref": "NOERROR 170.114.0.11",
+      "ours_ms": 249.298
+    },
+    {
+      "domain": "spectrum.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 142.136.168.58,142.136.168.7,142.136.81.135,142.136.81.136",
+      "ref": "read udp 172.28.75.153:52873-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 530.863
+    }
+  ],
+  "upstream_queries": 2759,
+  "upstream_tcp": 1,
+  "upstream_timeouts": 170,
+  "when": "2026-11-13T06:50:49Z",
+  "www": false
+}

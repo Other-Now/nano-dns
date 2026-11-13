@@ -1,0 +1,3 @@
+sockets=1 UDP RcvbufErrors +360 | sent=606916 recv=606556 timeouts=360 qps=74176 p50=1562us p99=9162us rcodes=map[NOERROR:606556]
+sockets=4 UDP RcvbufErrors +0 | sent=795357 recv=795357 timeouts=0 qps=99389 p50=1680us p99=13340us rcodes=map[NOERROR:795357]
+net.core.rmem_default=212992

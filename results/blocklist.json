@@ -1,0 +1,40 @@
+{
+  "experiment": "blocklist",
+  "host": {
+    "cpus": 4,
+    "go": "go1.26.5",
+    "goos": "linux"
+  },
+  "result": {
+    "feeds": [
+      "feeds/hagezi-tif-medium.rpz",
+      "feeds/urlhaus-filter.rpz"
+    ],
+    "heap_mb_1m": 107.4560775756836,
+    "heap_mb_real": 72.3302001953125,
+    "load_seconds": 2.11352889,
+    "lookup_ns_1m": 351.7953533333333,
+    "lookup_ns_real": 270.8423266666667,
+    "real_rules": 732979,
+    "tranco_top": 10000,
+    "tranco_top_listed": 15,
+    "tranco_top_listed_sample": [
+      "crn77.com",
+      "izy0.com",
+      "vnsextop1.com",
+      "ey43.com",
+      "cdn-fc.com",
+      "clickadu.net",
+      "kryptex.network",
+      "405kk.com",
+      "mks98.com",
+      "otieu.com",
+      "decafeligiblyhad.com",
+      "buffermotivatorsuffice.com",
+      "bondeddarkenedswerve.com",
+      "attacheatableoverlabor.com",
+      "phimsexsuong3x.net"
+    ]
+  },
+  "when": "2026-11-13T06:54:00Z"
+}

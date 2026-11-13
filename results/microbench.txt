@@ -1,0 +1,5 @@
+BenchmarkUnpackPack-4   	  211029	      5699 ns/op	  28.08 MB/s	    1976 B/op	      67 allocs/op
+ok  	github.com/Other-Now/nano-dns/dnswire	1.271s
+BenchmarkMatch/clean-4-labels-4         	12235100	        86.50 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMatch/blocked-wildcard-4       	37085834	        34.16 ns/op	       0 B/op	       0 allocs/op
+ok  	github.com/Other-Now/nano-dns/policy	4.446s

@@ -1,0 +1,15 @@
+{
+  "lists": {
+    "urlhaus": {"file": "urlhaus-filter.rpz", "format": "rpz"},
+    "tif":     {"file": "hagezi-tif-medium.rpz", "format": "rpz"}
+  },
+  "profiles": {
+    "default": ["urlhaus"],
+    "strict":  ["urlhaus", "tif"]
+  },
+  "subscribers": [
+    {"cidr": "10.1.0.0/16", "profile": "strict"},
+    {"cidr": "127.0.0.2/32", "profile": "strict"}
+  ],
+  "default": "default"
+}

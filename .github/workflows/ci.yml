@@ -1,0 +1,31 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: gofmt
+        run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
+      - run: go vet ./...
+      - name: unit + end-to-end tests (race detector)
+        run: go test -race -count=1 ./...
+      - name: fuzz the wire-format parser (60 s)
+        run: go test ./dnswire -run '^$' -fuzz FuzzUnpack -fuzztime 60s
+      - run: go build -o nanodns ./cmd/nanodns
+      - name: fetch threat feeds + Tranco list
+        run: ./scripts/fetch-feeds.sh
+      - name: experiments on the simulated hierarchy (short runs)
+        run: ./nanodns exp -d 5s all
+      - name: single-socket drops are kernel receive-buffer overflows
+        run: ./scripts/rcvbuf-check.sh | tee results/rcvbuf-check.txt
+      - name: difftest vs public resolvers (real internet, top 300)
+        run: ./nanodns difftest -n 300 -out results/difftest-ci.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results
+          path: results/

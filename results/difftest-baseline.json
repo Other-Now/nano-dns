@@ -1,0 +1,498 @@
+{
+  "bailiwick_dropped": 0,
+  "classes": {
+    "disjoint_cdn": 47,
+    "disjoint_ours_vs_ref": 8,
+    "identical": 833,
+    "ours_failed": 22,
+    "overlap": 2,
+    "rcode_diff": 1,
+    "ref_failed": 33,
+    "rotation": 54
+  },
+  "cold_ms_p50": 331.545,
+  "cold_ms_p90": 986.713,
+  "domains": 1000,
+  "qmin": false,
+  "ref": "1.1.1.1:53",
+  "skip": 0,
+  "to_investigate": [
+    {
+      "domain": "triplinkintl.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 43.107.189.231,43.107.192.234",
+      "ref": "read udp 172.28.75.153:50989-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1203.827
+    },
+    {
+      "domain": "pki.goog",
+      "class": "ref_failed",
+      "ours": "NOERROR 216.239.32.29",
+      "ref": "read udp 172.28.75.153:43973-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 855.81
+    },
+    {
+      "domain": "vkuserphoto.ru",
+      "class": "ref_failed",
+      "ours": "NOERROR 87.240.129.187,87.240.190.64",
+      "ref": "read udp 172.28.75.153:50339-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 576.529
+    },
+    {
+      "domain": "mit.edu",
+      "class": "ref_failed",
+      "ours": "NOERROR 23.15.150.186",
+      "ref": "read udp 172.28.75.153:56195-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1418.313
+    },
+    {
+      "domain": "avcdn.net",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:58533-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1118.058
+    },
+    {
+      "domain": "ailawandorder.com",
+      "class": "ref_failed",
+      "ours": "SERVFAIL ",
+      "ref": "read udp 172.28.75.153:41559-\u003e1.1.1.1:53: i/o timeout",
+      "ours_err": "read udp 172.28.75.153:34265-\u003e217.70.187.119:53: i/o timeout",
+      "ours_ms": 2053.362
+    },
+    {
+      "domain": "charter.net",
+      "class": "ref_failed",
+      "ours": "NOERROR 75.2.77.94,99.83.251.242",
+      "ref": "read udp 172.28.75.153:56051-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1070.211
+    },
+    {
+      "domain": "rbxcdn.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:55577-\u003e128.116.64.1:53: i/o timeout",
+      "ours_ms": 970.386
+    },
+    {
+      "domain": "t.co",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 162.159.140.229",
+      "ref": "NOERROR 172.66.0.227",
+      "ours_ms": 621.402
+    },
+    {
+      "domain": "adtrafficquality.google",
+      "class": "ref_failed",
+      "ours": "NOERROR 142.250.195.36",
+      "ref": "read udp 172.28.75.153:54916-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 193.86
+    },
+    {
+      "domain": "wixsite.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:39446-\u003e198.51.45.7:53: i/o timeout",
+      "ours_ms": 1226.723
+    },
+    {
+      "domain": "ttvnw.net",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:37463-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 262.259
+    },
+    {
+      "domain": "yandexcloud.net",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:40403-\u003e213.180.193.11:53: i/o timeout",
+      "ours_ms": 800.445
+    },
+    {
+      "domain": "hp.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 13.249.165.48,13.249.165.52,13.249.165.6,13.249.165.75",
+      "ref": "NOERROR 13.227.47.22,13.227.47.47,13.227.47.6,13.227.47.69",
+      "ours_ms": 404.308
+    },
+    {
+      "domain": "reuters.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 155.46.172.255",
+      "ref": "read udp 172.28.75.153:38737-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 155.563
+    },
+    {
+      "domain": "online-metrix.net",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:45147-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1112.7
+    },
+    {
+      "domain": "nature.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 151.101.104.95",
+      "ref": "NOERROR 151.101.208.95",
+      "ours_ms": 1233.309
+    },
+    {
+      "domain": "www.gov.uk",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 199.232.100.144",
+      "ref": "NOERROR 151.101.0.144,151.101.128.144,151.101.192.144,151.101.64.144",
+      "ours_ms": 752.689
+    },
+    {
+      "domain": "springer.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 151.101.104.95",
+      "ref": "NOERROR 151.101.208.95",
+      "ours_ms": 686.965
+    },
+    {
+      "domain": "plex.direct",
+      "class": "ref_failed",
+      "ours": "NOERROR 0.0.0.0",
+      "ref": "read udp 172.28.75.153:38170-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 859.971
+    },
+    {
+      "domain": "userapi.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 87.240.129.187,87.240.190.64",
+      "ref": "read udp 172.28.75.153:37525-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 486.192
+    },
+    {
+      "domain": "washingtonpost.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 23.63.110.104,23.63.110.57",
+      "ref": "NOERROR 23.45.91.139,23.45.91.211",
+      "ours_ms": 392.474
+    },
+    {
+      "domain": "alicdn.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 115.238.23.240,140.205.77.240",
+      "ref": "read udp 172.28.75.153:39051-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 2239.863
+    },
+    {
+      "domain": "scdn.co",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:37122-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 355.16
+    },
+    {
+      "domain": "yandex.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 5.255.255.77,77.88.44.55,77.88.55.88",
+      "ours_err": "read udp 172.28.75.153:38174-\u003e93.158.134.1:53: i/o timeout",
+      "ours_ms": 1176.127
+    },
+    {
+      "domain": "indeed.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 162.159.129.67,162.159.130.67",
+      "ref": "read udp 172.28.75.153:43984-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 254.628
+    },
+    {
+      "domain": "ddnss.de",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 85.114.136.161",
+      "ours_err": "read udp 172.28.75.153:43374-\u003e78.31.65.41:53: i/o timeout",
+      "ours_ms": 1936.29
+    },
+    {
+      "domain": "openx.net",
+      "class": "ref_failed",
+      "ours": "NOERROR 34.98.64.218,35.244.159.8",
+      "ref": "read udp 172.28.75.153:35045-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 284.992
+    },
+    {
+      "domain": "google.de",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 142.250.29.94",
+      "ours_err": "read udp 172.28.75.153:57031-\u003e216.239.32.10:53: i/o timeout",
+      "ours_ms": 1042.512
+    },
+    {
+      "domain": "klaviyo.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 18.164.144.15,18.164.144.26,18.164.144.49,18.164.144.96",
+      "ours_err": "read udp 172.28.75.153:44625-\u003e205.251.192.224:53: i/o timeout",
+      "ours_ms": 982.191
+    },
+    {
+      "domain": "amzn.to",
+      "class": "ref_failed",
+      "ours": "NOERROR 67.199.248.12,67.199.248.13",
+      "ref": "read udp 172.28.75.153:53203-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 408.18
+    },
+    {
+      "domain": "firefox.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 35.190.14.201",
+      "ref": "read udp 172.28.75.153:33924-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 434.941
+    },
+    {
+      "domain": "atlassian.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 13.35.20.42,13.35.20.55,13.35.20.56,13.35.20.96",
+      "ref": "read udp 172.28.75.153:50093-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 254.375
+    },
+    {
+      "domain": "deviantart.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 13.35.20.17,13.35.20.37,13.35.20.6,13.35.20.77",
+      "ours_err": "read udp 172.28.75.153:52497-\u003e205.251.192.154:53: i/o timeout",
+      "ours_ms": 997.418
+    },
+    {
+      "domain": "target.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 151.101.130.187,151.101.194.187,151.101.2.187,151.101.66.187",
+      "ref": "read udp 172.28.75.153:42389-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 320.649
+    },
+    {
+      "domain": "accuweather.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 23.9.98.145",
+      "ours_err": "read udp 172.28.75.153:35964-\u003e23.211.133.67:53: i/o timeout",
+      "ours_ms": 925.812
+    },
+    {
+      "domain": "merriam-webster.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 13.35.20.100,13.35.20.21,13.35.20.27,13.35.20.87",
+      "ours_err": "read udp 172.28.75.153:60184-\u003e205.251.193.67:53: i/o timeout",
+      "ours_ms": 917.793
+    },
+    {
+      "domain": "edgecdn.ru",
+      "class": "ref_failed",
+      "ours": "NOERROR 193.17.93.93",
+      "ref": "read udp 172.28.75.153:60986-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 518.356
+    },
+    {
+      "domain": "smaato.net",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:47104-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1057.387
+    },
+    {
+      "domain": "uber.com",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 104.36.194.8",
+      "ref": "NOERROR 104.36.194.73",
+      "ours_ms": 282.635
+    },
+    {
+      "domain": "bandcamp.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 151.101.1.91,151.101.129.91,151.101.193.91,151.101.65.91",
+      "ref": "read udp 172.28.75.153:37147-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 203.138
+    },
+    {
+      "domain": "fda.gov",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 23.215.60.59,23.215.60.82",
+      "ours_err": "read udp 172.28.75.153:49563-\u003e193.108.91.242:53: i/o timeout",
+      "ours_ms": 978.742
+    },
+    {
+      "domain": "reverse.it",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 23.211.137.128,23.215.60.8",
+      "ours_err": "read udp 172.28.75.153:35538-\u003e96.16.211.2:53: i/o timeout",
+      "ours_ms": 1064.904
+    },
+    {
+      "domain": "gumgum.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 18.67.233.104,18.67.233.12,18.67.233.52,18.67.233.88",
+      "ours_err": "read udp 172.28.75.153:40759-\u003e205.251.193.211:53: i/o timeout",
+      "ours_ms": 1010.228
+    },
+    {
+      "domain": "tubi.io",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:46205-\u003e205.251.199.133:53: i/o timeout",
+      "ours_ms": 1175.348
+    },
+    {
+      "domain": "quantserve.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 54.214.172.129",
+      "ref": "read udp 172.28.75.153:55553-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 258.804
+    },
+    {
+      "domain": "asus.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 103.10.4.227",
+      "ref": "read udp 172.28.75.153:38781-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 264.978
+    },
+    {
+      "domain": "netexpert.ru",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 185.37.129.10",
+      "ours_err": "read udp 172.28.75.153:41162-\u003e94.19.255.12:53: i/o timeout",
+      "ours_ms": 1832.187
+    },
+    {
+      "domain": "shopee.co.id",
+      "class": "disjoint_ours_vs_ref",
+      "ours": "NOERROR 147.136.168.96",
+      "ref": "NOERROR 134.65.77.140",
+      "ours_ms": 481.464
+    },
+    {
+      "domain": "herokuapp.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 3.208.64.16,98.89.248.27",
+      "ours_err": "read udp 172.28.75.153:49114-\u003e45.54.92.65:53: i/o timeout",
+      "ours_ms": 1238.983
+    },
+    {
+      "domain": "samsungacr.com",
+      "class": "ref_failed",
+      "ours": "NOERROR ",
+      "ref": "read udp 172.28.75.153:36336-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 171.559
+    },
+    {
+      "domain": "singtelchina.cn",
+      "class": "ref_failed",
+      "ours": "SERVFAIL ",
+      "ref": "read udp 172.28.75.153:38837-\u003e1.1.1.1:53: i/o timeout",
+      "ours_err": "resolver: no usable name-server address",
+      "ours_ms": 1094.924
+    },
+    {
+      "domain": "cloudsink.net",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR ",
+      "ours_err": "read udp 172.28.75.153:36477-\u003e205.251.194.75:53: i/o timeout",
+      "ours_ms": 940.879
+    },
+    {
+      "domain": "ddns.net",
+      "class": "ref_failed",
+      "ours": "NOERROR 158.247.7.206",
+      "ref": "read udp 172.28.75.153:49850-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1284.244
+    },
+    {
+      "domain": "yieldmo.com",
+      "class": "ref_failed",
+      "ours": "NOERROR 35.212.43.67",
+      "ref": "read udp 172.28.75.153:60408-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 155.677
+    },
+    {
+      "domain": "vivo.com.cn",
+      "class": "ref_failed",
+      "ours": "NOERROR 220.181.158.191",
+      "ref": "read udp 172.28.75.153:57175-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 384.558
+    },
+    {
+      "domain": "spectrum.com",
+      "class": "rcode_diff",
+      "ours": "NOERROR 142.136.168.58,142.136.168.7,142.136.81.135,142.136.81.136",
+      "ref": "SERVFAIL ",
+      "ours_ms": 537.676
+    },
+    {
+      "domain": "visa.cn",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 60.217.234.148",
+      "ours_err": "read udp 172.28.75.153:45523-\u003e116.198.165.51:53: i/o timeout",
+      "ours_ms": 2303.694
+    },
+    {
+      "domain": "flashtalking.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 104.248.231.123",
+      "ours_err": "read udp 172.28.75.153:49133-\u003e192.48.79.30:53: i/o timeout",
+      "ours_ms": 2402.347
+    },
+    {
+      "domain": "cootlogix.com",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 34.149.87.45",
+      "ours_err": "read udp 172.28.75.153:41237-\u003e198.51.44.66:53: i/o timeout",
+      "ours_ms": 1146.84
+    },
+    {
+      "domain": "character.ai",
+      "class": "ref_failed",
+      "ours": "NOERROR 104.18.222.226,104.18.223.226",
+      "ref": "read udp 172.28.75.153:42751-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 1023.138
+    },
+    {
+      "domain": "pbs.org",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 54.225.198.196,54.225.206.152",
+      "ours_err": "read udp 172.28.75.153:52985-\u003e205.251.196.206:53: i/o timeout",
+      "ours_ms": 871.52
+    },
+    {
+      "domain": "webempresa.eu",
+      "class": "ref_failed",
+      "ours": "NOERROR 213.158.84.206",
+      "ref": "read udp 172.28.75.153:60660-\u003e1.1.1.1:53: i/o timeout",
+      "ours_ms": 452.895
+    },
+    {
+      "domain": "0xrpc.io",
+      "class": "ours_failed",
+      "ours": "SERVFAIL ",
+      "ref": "NOERROR 146.19.24.104",
+      "ours_err": "read udp 172.28.75.153:37211-\u003e185.193.124.2:53: i/o timeout",
+      "ours_ms": 1122.478
+    }
+  ],
+  "upstream_queries": 2458,
+  "upstream_tcp": 0,
+  "upstream_timeouts": 113,
+  "when": "2026-11-13T06:47:53Z",
+  "www": false
+}
